@@ -1,0 +1,6 @@
+host: localhost
+port: 8080
+kafka:
+  broker_list:
+    - localhost:9092
+  topic: example-topic

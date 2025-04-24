@@ -1,0 +1,15 @@
+kafka:
+  kafka_consumer_group: example-consumer-group
+  broker_list:
+    - localhost:9092
+  topic: example-topic
+  assignor: range
+
+db:
+  db_host: localhost
+  db_port: 8082
+  db_name: order_db
+  db_user: admin
+  db_password: 1234
+  db_sslmode: disable
+  
