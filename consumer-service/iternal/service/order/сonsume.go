@@ -26,7 +26,7 @@ func NewMessageService(ctx context.Context, repo repository.OrderRepository, ass
 	case "sticky":
 		config.Consumer.Group.Rebalance.GroupStrategies = []sarama.BalanceStrategy{sarama.NewBalanceStrategySticky()}
 	case "round-robin":
-		config.Consumer.Group.Rebalance.GroupStrategies = []sarama.BalanceStrategy{sarama.NewBalanceStrategyRange()}
+		config.Consumer.Group.Rebalance.GroupStrategies = []sarama.BalanceStrategy{sarama.NewBalanceStrategyRoundRobin()}
 	default:
 		log.Panicf("Unrecognized consumer group partition assignor: %s", assignor)
 	}
